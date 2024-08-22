@@ -9,12 +9,15 @@ receives and parses the response. It displays images on the page from that respo
 Details on how to use it or what functionality is offered
 The script listens for a button click, grabs the user's search term, sends a request to Giphy's API, and then displays the GIFs it receives.
 
-Technologies Used ( .html , .css )
+Technologies Used 
 .HTML
 .CSS
-JavaScript
+.JavaScript
+Bootstrap
+Google Fonts
+
 
 Ideas for future improvement (minimum of 3)
-1.
-2.
-3.
+1.  Have multiple pages of Gifs
+2.  Add a random selector option
+3.  Possibly make website more interactive
