@@ -14,6 +14,7 @@ searchButton.addEventListener('click', () => {
 });
 
 translateButton.addEventListener('click', (event) => {
+    event.preventDefault(); 
     const query = translateInput.value.trim(); 
     if (query !== '') {
         quickGifLookup(query); 
