@@ -1,0 +1,116 @@
+body {
+    font-family: 'Rock Salt', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    color:aqua;
+    background-color: black;
+    
+}
+.navbar-brand{
+    color: chartreuse;
+}
+#translate-button{
+    color: aqua;
+    border: 1px solid aqua;
+    background-color: black;
+    border-radius: 5px;
+}
+#translate-button:hover{
+    background-color: chartreuse;
+    color: black;
+}
+#translate-input{
+    border: 2px solid magenta;
+    color:blueviolet;
+}
+
+h1{
+    margin: auto;
+    text-align:center;
+    position: relative;
+}
+h1::before{
+    content: " ";
+    height: 2px;
+    width: 50vw;
+    background-color: aqua;
+    color:aqua;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    
+}
+h1::after{
+    content: " ";
+    height: 2px;
+    width: 50vw;
+    background-color: aqua;
+    color:aqua;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    
+}
+span{
+    font-size: larger;
+}
+
+.container {
+    flex-grow: 1;
+    max-width: auto;
+    margin: auto;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    
+}
+#search-input {
+    width: 50%;
+    padding: 10px;
+    border: 5px solid chartreuse;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: blueviolet;
+}
+#search-button {
+    padding: 10px 10px;
+    border: solid magenta;
+    border-radius: 5px;
+    color:blueviolet;
+    background-color: black;
+    
+}
+#search-button:hover {
+    background-color: chartreuse;
+}
+#clear-button {
+    padding: 10px 10px;
+    border: solid magenta;
+    border-radius: 5px; 
+    color: blueviolet;
+    background-color: black;
+}
+
+#clear-button:hover {
+    background-color: chartreuse;
+}
+
+#outputArea{
+    flex-wrap: wrap;
+    
+}
+.gif {
+    margin: 10px;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: chartreuse 8px 5px;
+}
+
+#footer {
+    border-top: 8px ridge;
+}
