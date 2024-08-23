@@ -6,14 +6,18 @@ const outputAreaDiv = document.getElementById('outputArea');
 const translateButton = document.getElementById('translate-button');
 const translateInput = document.getElementById('translate-input');
 
+
+//search btn
 searchButton.addEventListener('click', () => {
     const query = searchInput.value.trim();
     console.log(query);
+    window.alert(`You are searching for: "${query}"`);
     if (query !== '') {
         findGifs(query); 
     }
 });
 
+// translate btn
 translateButton.addEventListener('click', (event) => {
     event.preventDefault(); 
     const query = translateInput.value.trim(); 
@@ -22,11 +26,12 @@ translateButton.addEventListener('click', (event) => {
         quickGifLookup(query); 
     }
 });
-
+//clear btb
 clearButton.addEventListener('click', () => {
     outputAreaDiv.innerHTML = '';
 });
 
+// search input
 function findGifs(query) {
     const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${query}&limit=20`;
     console.log(url);
@@ -42,6 +47,7 @@ function findGifs(query) {
     .catch(error => console.error( error));    
 }
 
+// translate input -nav
 function quickGifLookup(query) {
     const url = `https://api.giphy.com/v1/gifs/translate?api_key=${apiKey}&s=${query}`;
     console.log(url);
@@ -57,6 +63,8 @@ function quickGifLookup(query) {
     .catch(error => console.error( error));
 }
 
+
+/// display functions/ create img element 
 function displaySingleGif(gifUrl) {  
     outputAreaDiv.innerHTML = '';
     const img = document.createElement('img');
@@ -66,7 +74,6 @@ function displaySingleGif(gifUrl) {
     outputAreaDiv.appendChild(img);
     console.log(gifUrl);
 }
-
 function displayGifs(gifs) { 
     outputAreaDiv.innerHTML = ''; 
     gifs.forEach(gif => {  
@@ -75,7 +82,6 @@ function displayGifs(gifs) {
         img.alt = gif.title; 
         img.className = 'gif'; 
 
-        outputAreaDiv.appendChild(img); 
-        
+        outputAreaDiv.appendChild(img);  
     });
 }
