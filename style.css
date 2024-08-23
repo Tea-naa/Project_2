@@ -12,6 +12,18 @@ body {
     color: chartreuse;
 }
 
+.blinking-text {
+    animation: blink-animation 1s steps(5, start) infinite;
+    color: chartreuse; 
+    font-weight: bold;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
 #translate-button{
     color: aqua;
     border: 1px solid aqua;
@@ -40,7 +52,6 @@ h1::before{
     height: 2px;
     width: 50vw;
     background-color: aqua;
-    color:aqua;
     position: absolute;
     top: 120%;
     right: 0;   
@@ -51,7 +62,6 @@ h1::after{
     height: 2px;
     width: 50vw;
     background-color: aqua;
-    color:aqua;
     position: absolute;
     top: 120%;
     left: 0; 

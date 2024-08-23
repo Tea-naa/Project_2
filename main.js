@@ -11,7 +11,7 @@ const translateInput = document.getElementById('translate-input');
 searchButton.addEventListener('click', () => {
     const query = searchInput.value.trim();
     console.log(query);
-    window.alert(`You are searching for: "${query}"`);
+    window.alert(`GIFs searched for: "${query}"`);
     if (query !== '') {
         findGifs(query); 
     }
@@ -28,6 +28,7 @@ translateButton.addEventListener('click', (event) => {
 });
 //clear btb
 clearButton.addEventListener('click', () => {
+    console.log('cleared search');
     outputAreaDiv.innerHTML = '';
 });
 
