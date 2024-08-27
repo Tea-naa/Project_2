@@ -21,7 +21,7 @@ body {
 @keyframes blink-animation {
     to {
         visibility: hidden;
-    }
+    }   
 }
 
 #translate-button{
